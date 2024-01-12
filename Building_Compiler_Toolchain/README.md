@@ -137,7 +137,47 @@ Installed:
 Complete!
 ```
 
+Also had to manually install m4, whatever that is:
 
+```
+checking for suitable m4... configure: error: No usable m4 in $PATH or /usr/5bin (see config.log for reasons).
+make: *** No targets specified and no makefile found.  Stop.
+make: *** No rule to make target 'install'.  Stop.
+[ec2-user@ip-172-31-16-160 Building_Compiler_Toolchain]$ sudo yum install m4
+Last metadata expiration check: 8:52:04 ago on Thu Jan 11 19:01:47 2024.
+Dependencies resolved.
+================================================================================
+ Package   Architecture  Version                       Repository          Size
+================================================================================
+Installing:
+ m4        x86_64        1.4.19-2.amzn2023.0.2         amazonlinux        296 k
+
+Transaction Summary
+================================================================================
+Install  1 Package
+
+Total download size: 296 k
+Installed size: 582 k
+Is this ok [y/N]: y
+Downloading Packages:
+m4-1.4.19-2.amzn2023.0.2.x86_64.rpm             4.2 MB/s | 296 kB     00:00    
+--------------------------------------------------------------------------------
+Total                                           2.3 MB/s | 296 kB     00:00     
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                        1/1 
+  Installing       : m4-1.4.19-2.amzn2023.0.2.x86_64                        1/1 
+  Running scriptlet: m4-1.4.19-2.amzn2023.0.2.x86_64                        1/1 
+  Verifying        : m4-1.4.19-2.amzn2023.0.2.x86_64                        1/1 
+
+Installed:
+  m4-1.4.19-2.amzn2023.0.2.x86_64                                               
+
+Complete!
+```
 
 
 
