@@ -179,6 +179,33 @@ Installed:
 Complete!
 ```
 
+Uh-oh, we've got errors with make against gcc-core-4.6.1.tar.bz2:
+
+```
+gtype-desc.c: At top level:
+gtype-desc.c:8838:18: error: subscripted value is neither array nor pointer nor vector
+ 8838 |     sizeof (x_rtl[0]),
+      |                  ^
+gtype-desc.c:8957:36: error: subscripted value is neither array nor pointer nor vector
+ 8957 |     sizeof (default_target_libfuncs[0]),
+      |                                    ^
+gtype-desc.c:9041:31: error: subscripted value is neither array nor pointer nor vector
+ 9041 |     sizeof (default_target_rtl[0]),
+      |                               ^
+gtype-desc.c:9062:31: error: subscripted value is neither array nor pointer nor vector
+ 9062 |     sizeof (default_target_rtl[0]),
+      |                               ^
+gtype-desc.c:9069:31: error: subscripted value is neither array nor pointer nor vector
+ 9069 |     sizeof (default_target_rtl[0]),
+      |                               ^
+gtype-desc.c:9076:31: error: subscripted value is neither array nor pointer nor vector
+ 9076 |     sizeof (default_target_rtl[0]),
+      |                               ^
+make[1]: *** [Makefile:1074: gtype-desc.o] Error 1
+make[1]: Leaving directory '/home/ec2-user/mit6.828/Building_Compiler_Toolchain/gcc-4.6.1/build/gcc'
+make: *** [Makefile:5264: all-gcc] Error 2
+[ec2-user@ip-172-31-16-160 build]$ 
+```
 
 
 
